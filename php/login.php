@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 // Start the session and redirect to the searching page
                 $_SESSION['user_id'] = $user['ID_USER'];
                 $_SESSION['email'] = $user['EMAIL'];
-                header("Location: ../searching.html");
+                header("Location: ../pages/searching.html");
                 exit();
             } else {
                 echo "<script>alert('Password salah'); window.location.href='../pages/login.html';</script>";
