@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('connection.php'); // Ensure this connects to your Oracle database using OCI8
+$user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
 
 // Retrieve form data
 $specialization = $_POST['bidang_mentor'];
@@ -9,8 +10,7 @@ $availability = "Yes";
 $description = $_POST['deskripsi'];
 $price = $_POST['harga'];
 $rate = null; 
-
-$tb_user_id_user = 6; // Example value\
+$tb_user_id_user = $user_id; // Example value\
 
 $upload_dir = '../uploads/';
 $image_name = $_FILES['upload_image']['name'];
