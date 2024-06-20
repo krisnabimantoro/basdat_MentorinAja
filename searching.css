@@ -12,12 +12,17 @@ body {
 
 .header {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
     color: #333;
     padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .top-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
 }
 
 .header .logo {
@@ -26,54 +31,57 @@ body {
 }
 
 .header .logo img {
-    height: 40px;
+    height: 30px;
     margin-right: 10px;
+}
+
+.header h1 {
+    font-size: 1em;
+    margin: 0;
 }
 
 .header .search-bar {
-    flex-grow: 1;
+    width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .header .search-bar input {
-    width: 60%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: #b5c8f5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    position: relative;
 }
 
 .header .user-icon img {
-    height: 40px;
-    border-radius: 50%;
+    height: 55px;
+    border-radius: 35%;
 }
 
 .filters {
     display: flex;
     justify-content: center;
-    padding: 20px;
-    background-color: #0056b3;
+    background-color: transparent;
+    gap: 5px;
 }
 
-.filters select,
-.filters button {
-    margin: 0 10px;
-    padding: 10px 20px;
+.filters select {
+    padding: 10px 220px 10px 20px;
     border: none;
-    border-radius: 5px;
-    background-color: white;
-    color: #0056b3;
+    border-radius: 50px;
     cursor: pointer;
+    text-align: left;
+    background-color: #336AE9;
+    color: white;
 }
 
-.filters button {
-    background-color: #fff;
-    color: #0056b3;
-}
-
-.filters button:hover {
-    background-color: #e0e0e0;
+.filters select:hover {
+    background-color: #336AE9;
 }
 
 .mentorship-section {
@@ -84,6 +92,7 @@ body {
 
 .mentorship-section h2 {
     font-weight: 700;
+    margin-top: 50px;
     margin-bottom: 20px;
     color: #394559;
 }
@@ -112,25 +121,25 @@ body {
 .card h3 {
     font-weight: 700;
     margin: 10px 0;
-    color: #394559;
+    color: #000000;
 }
 
 .card p {
     font-weight: 400;
-    color: #555;
+    color: white;
 }
 
 .card .price {
     font-weight: 700;
-    color: #007bff;
+    color: white;
 }
 
 .card .rating {
     font-weight: 400;
     color: #ff9900;
+    display: flex;
 }
 
-/* CSS untuk desktop */
 @media (min-width: 1024px) {
     .mentorship-section {
         text-align: left;
@@ -150,7 +159,7 @@ body {
         flex: 1 1 calc(33.33% - 20px);
         max-width: calc(33.33% - 20px); 
         padding: 20px; 
-        background-color: #ffffff; 
+        background-color: #336AE9; 
         border-radius: 10px; 
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease; 
@@ -164,24 +173,36 @@ body {
         font-weight: 700;
         font-size: 1.6rem; 
         margin: 10px 0; 
-        color: #394559; 
+        color: white; 
     }
 
     .card p {
         font-weight: 400; 
         font-size: 1.1rem;
-        color: #555; 
+        color: white; 
         line-height: 1.6;
         margin-bottom: 15px;
     }
+    
+    .card .details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
 
+    
     .card .price {
         font-weight: 700;
-        color: #007bff;
+        color: white;
+        margin: 0;
     }
 
     .card .rating {
         font-weight: 400;
-        color: #ff9900;
+        color: white;
+        display: flex;
+        align-items: center;
     }
+
 }
