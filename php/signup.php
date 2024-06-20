@@ -15,7 +15,7 @@ $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 try {
     // Prepare the SQL statement
-    $sql = "INSERT INTO tb_user (name, date_of_birth, email, address, regis_date, id_role, no_handphone, password) 
+    $sql = "INSERT INTO tb_user (name, date_of_birth, email, address, regis_date, TB_ROLE_ID_ROLE, no_handphone, password) 
             VALUES (:name, TO_DATE(:dob, 'YYYY-MM-DD'), :email, :address, SYSDATE, :id_role, :phone, :password)";
     
     $stmt = oci_parse($conn, $sql);
