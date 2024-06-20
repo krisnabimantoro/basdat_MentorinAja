@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Mentorship</title>
+    <link rel="stylesheet" href="../styles/TambahMentorship.css" />
+  </head>
+  <body>
+    <div class="tambah-mentorship">
+      <div class="jadilah-mentor">Jadilah Mentor</div>
+      <form action="../php/tambahmentor.php" method="post" enctype="multipart/form-data">
+        <div class="group group-4">
+          <label for="bidang-mentor-input" class="label">Masukkan Bidang Mentor</label>
+          <input type="text" name="bidang_mentor" id="bidang-mentor-input" placeholder="Bidang Mentor" class="input-field" />
+        </div>
+        <div class="group group-6">
+          <label for="offline-online-select" class="label">Dilakukan secara</label>
+          <select id="offline-online-select" class="input-field" name="offline_online">
+            <!-- <option value="Offline/Online">Offline/Online</option> -->
+            <option value="Offline">Offline</option>
+            <option value="Online">Online</option>
+          </select>
+        </div>
+        <div class="group group-7">
+          <label for="deskripsi-singkat-textarea" class="label">Deskripsi</label>
+          <textarea id="deskripsi-singkat-textarea" placeholder="Deskripsi singkat" class="input-field" name="deskripsi"></textarea>
+        </div>
+        <div class="group group-5">
+          <label for="upload-input" class="label">Upload Gambar</label>
+          <label for="upload-input" class="upload-label">
+            <div class="icon-image-plus">&#43;</div>
+          </label>
+
+          <input type="file" id="upload-input" name="upload_image" accept="image/*" />
+        </div>
+        <div class="group group-8">
+          <label for="harga-input" class="label">Harga</label>
+
+          <input type="text" id="harga-input" placeholder="Rp." class="input-field" name="harga" />
+        </div>
+        <div class="rectangle-submit">
+          <button class="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
