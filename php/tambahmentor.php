@@ -4,13 +4,12 @@ include('connection.php'); // Ensure this connects to your Oracle database using
 
 // Retrieve form data
 $specialization = $_POST['bidang_mentor'];
-$availability = $_POST['offline_online'];
+$tb_status_id_status = $_POST['offline_online'];
+$availability = "Yes";
 $description = $_POST['deskripsi'];
 $price = $_POST['harga'];
-$rate = null; // Assuming rate is not provided, you may want to add it to the form
+$rate = null; 
 
-// Assuming TB_STATUS_ID_STATUS and TB_USER_ID_USER are constants or come from session/user data
-$tb_status_id_status = 1; // Example value
 $tb_user_id_user = 6; // Example value\
 
 $upload_dir = '../uploads/';
