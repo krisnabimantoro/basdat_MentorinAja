@@ -1,208 +1,254 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f8f9fa;
-    margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  background-color: #ffffff;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar-left .logo {
+  height: 60px;
+  margin-left: 20px;
+}
+
+.navbar-center .menu {
+  list-style: none;
+
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-center .menu li {
+  margin: 0 15px;
+}
+
+.navbar-center .menu li a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.navbar-center .menu li a:hover {
+  text-decoration: underline;
+}
+
+.navbar-right .profile-pic {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
 }
 
 .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #333;
-    padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  padding: 10px 20px;
 }
 
 .header .top-row {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 }
 
 .header .logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .header .logo img {
-    height: 30px;
-    margin-right: 10px;
+  height: 30px;
+  margin-right: 10px;
 }
 
 .header h1 {
-    font-size: 1em;
-    margin: 0;
+  font-size: 1em;
+  margin: 0;
 }
 
 .header .search-bar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .header .search-bar input {
-    width: 100%;
-    padding: 10px 40px 10px 10px;
-    border: none;
-    border-radius: 50px;
-    background-color: #b5c8f5;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-size: cover;
-    position: relative;
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  border: none;
+  border-radius: 50px;
+  background-color: #b5c8f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  position: relative;
 }
 
 .header .user-icon img {
-    height: 55px;
-    border-radius: 35%;
+  height: 55px;
+  border-radius: 35%;
 }
 
 .filters {
-    display: flex;
-    justify-content: center;
-    background-color: transparent;
-    gap: 5px;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  gap: 5px;
 }
 
 .filters select {
-    padding: 10px 220px 10px 20px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    text-align: left;
-    background-color: #336AE9;
-    color: white;
+  padding: 10px 220px 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-align: left;
+  background-color: #336ae9;
+  color: white;
 }
 
 .filters select:hover {
-    background-color: #336AE9;
+  background-color: #336ae9;
 }
 
 .mentorship-section {
-    text-align: left;
-    padding: 20px;
-    font-size: 22px;
+  text-align: left;
+  padding: 20px;
+  font-size: 22px;
 }
 
 .mentorship-section h2 {
-    font-weight: 700;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    color: #394559;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: #394559;
 }
 
 .mentorship-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    padding: 20px;
-    text-align: left;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+  text-align: left;
 }
 
 .card img {
-    width: 100%;
-    border-radius: 10px;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .card h3 {
-    font-weight: 700;
-    margin: 10px 0;
-    color: #000000;
+  font-weight: 700;
+  margin: 10px 0;
+  color: #000000;
 }
 
 .card p {
-    font-weight: 400;
-    color: white;
+  font-weight: 400;
+  color: white;
 }
 
 .card .price {
-    font-weight: 700;
-    color: white;
+  font-weight: 700;
+  color: white;
 }
 
 .card .rating {
-    font-weight: 400;
-    color: #ff9900;
-    display: flex;
+  font-weight: 400;
+  color: #ff9900;
+  display: flex;
 }
 
 @media (min-width: 1024px) {
-    .mentorship-section {
-        text-align: left;
-        padding: 20px;
-        font-size: 22px;
-    }
+  .mentorship-section {
+    text-align: left;
+    padding: 20px;
+    font-size: 22px;
+  }
 
-    .mentorship-cards {
-        display: flex;
-        justify-content: flex-start; 
-        gap: 20px; 
-        flex-wrap: wrap; 
-        margin: 0 -10px;
-    }
+  .mentorship-cards {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
 
-    .card {
-        flex: 1 1 calc(33.33% - 20px);
-        max-width: calc(33.33% - 20px); 
-        padding: 20px; 
-        background-color: #336AE9; 
-        border-radius: 10px; 
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease; 
-    }
+  .card {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    padding: 20px;
+    background-color: #336ae9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
 
-    .card:hover {
-        transform: translateY(-5px);
-    }
+  .card:hover {
+    transform: translateY(-5px);
+  }
 
-    .card h3 {
-        font-weight: 700;
-        font-size: 1.6rem; 
-        margin: 10px 0; 
-        color: white; 
-    }
+  .card h3 {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin: 10px 0;
+    color: white;
+  }
 
-    .card p {
-        font-weight: 400; 
-        font-size: 1.1rem;
-        color: white; 
-        line-height: 1.6;
-        margin-bottom: 15px;
-    }
-    
-    .card .details {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 10px;
-    }
+  .card p {
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
 
-    
-    .card .price {
-        font-weight: 700;
-        color: white;
-        margin: 0;
-    }
+  .card .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
 
-    .card .rating {
-        font-weight: 400;
-        color: white;
-        display: flex;
-        align-items: center;
-    }
+  .card .price {
+    font-weight: 700;
+    color: white;
+    margin: 0;
+  }
 
+  .card .rating {
+    font-weight: 400;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
 }
