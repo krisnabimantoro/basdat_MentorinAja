@@ -1,43 +1,49 @@
 <?php
 session_start();
-require 'connection.php';
+include('connection.php'); // Ensure this connects to your Oracle database using OCI8
+
 $name = $_POST['name'];
+$dob = $_POST['dob'];
 $email = $_POST['email'];
+$address = $_POST['address'];
+$phone = $_POST['phone'];
 $password = $_POST['password'];
+$id_role = $_POST['role'];
 
-$sql_check = 'SELECT COUNT(*) AS COUNT FROM tb_user WHERE email = :email';
-$stid_check = oci_parse($conn, $sql_check);
-oci_bind_by_name($stid_check, ':email', $email);
-oci_execute($stid_check);
-$row = oci_fetch_assoc($stid_check);
+// Hash the password for security
+$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-if ($row['COUNT'] > 0) {
-    echo "Email sudah terdaftar!";
-} else {
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+try {
+    // Prepare the SQL statement
+    $sql = "INSERT INTO tb_user (name, date_of_birth, email, address, regis_date, id_role, no_handphone, password) 
+            VALUES (:name, TO_DATE(:dob, 'YYYY-MM-DD'), :email, :address, SYSDATE, :id_role, :phone, :password)";
+    
+    $stmt = oci_parse($conn, $sql);
+    
+    // Bind parameters
+    oci_bind_by_name($stmt, ':name', $name);
+    oci_bind_by_name($stmt, ':dob', $dob);
+    oci_bind_by_name($stmt, ':email', $email);
+    oci_bind_by_name($stmt, ':address', $address);
+    oci_bind_by_name($stmt, ':id_role', $id_role);
+    oci_bind_by_name($stmt, ':phone', $phone);
+    oci_bind_by_name($stmt, ':password', $hashed_password);
 
-    $sql_insert = 'INSERT INTO tb_user (name, date_of_birth,email,address,regis_date,TB_ROLE_ID_ROLE,no_handphone, password) VALUES (:name, :date_of_birth,:email,:address,:regis_date,:TB_ROLE_ID_ROLE,:no_handphone, password)';  
-    $stid_insert = oci_parse($conn, $sql_insert);
-    oci_bind_by_name($stid_insert, ':name', $name);
-    oci_bind_by_name($stid_insert, ':date_of_birth', $date_of_birth);
-    oci_bind_by_name($stid_insert, ':email', $email);
-    oci_bind_by_name($stid_insert, ':address', $address);
-    oci_bind_by_name($stid_insert, ':regis_date', $regis_date);
-    oci_bind_by_name($stid_insert, ':TB_ROLE_ID_ROLE', $TB_ROLE_ID_ROLE);
-    oci_bind_by_name($stid_insert, ':no_handphone', $no_handphone);
-    oci_bind_by_name($stid_insert, ':password', $hashed_password);
-
-    $result = oci_execute($stid_insert);
+    // Execute the statement
+    $result = oci_execute($stmt, OCI_NO_AUTO_COMMIT);
 
     if ($result) {
-        echo "Pendaftaran berhasil! Anda dapat login sekarang.";
+        oci_commit($conn); // Commit the transaction
+        echo "<script>alert('Berhasil Membuat Akun'); window.location.href='../login.html';</script>";
+        exit();
     } else {
-        echo "Pendaftaran gagal! Silakan coba lagi.";
+        $e = oci_error($stmt); // For error handling
+        echo "Error: " . $e['message'];
     }
 
-    oci_free_statement($stid_insert);
+    oci_free_statement($stmt);
+    oci_close($conn);
+} catch (Exception $e) {
+    echo "Error: " . $e->getMessage();
 }
-
-oci_free_statement($stid_check);
-oci_close($conn);
 ?>
