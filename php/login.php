@@ -28,10 +28,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 header("Location: ../searching.html");
                 exit();
             } else {
-                echo "<script>alert('Password salah'); window.location.href='../login.html';</script>";
+                echo "<script>alert('Password salah'); window.location.href='../pages/login.html';</script>";
             }
         } else {
-            echo "<script>alert('Email tidak ditemukan'); window.location.href='../login.html';</script>";
+            echo "<script>alert('Email tidak ditemukan'); window.location.href='../pages/login.html';</script>";
         }
 
         oci_free_statement($stid);
