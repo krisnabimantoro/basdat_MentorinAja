@@ -1,0 +1,235 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.profile-container {
+    width: 70%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #1e90ff;
+    border-radius: 10px 10px 0 0;
+    color: #fff;
+}
+
+.profile-pic-wrapper {
+    margin-right: 20px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-info h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.view-profile {
+    background-color: #fff;
+    color: #1e90ff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: start;
+}
+
+.view-profile:hover {
+    background-color: #e0e0e0;
+    transition: 0.3s;
+}
+
+.profile-settings {
+    padding: 20px;
+}
+
+.settings-header {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.settings-header h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #1e90ff;
+}
+
+.settings-header p {
+    color: #555;
+    font-size: 14px;
+}
+
+.settings-section {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.section-description {
+    width: 35%;
+    margin-right: 5%;
+}
+
+.section-description h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #1e90ff;
+}
+
+.section-description p {
+    color: #555;
+    font-size: 14px;
+}
+
+.account-profile {
+    width: 65%; /* Adjusted width to match the width of the Public Profile section */
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    width: 30%; /* Adjusted width for labels */
+    text-align: right;
+    color: #555;
+    margin-right: 15px; /* Improved spacing */
+}
+
+.form-group .input-group {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border: 1px solid #1e90ff;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.form-group input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 8px; /* Slightly increased padding for better visual balance */
+}
+
+.separator {
+    border-left: 1px solid #1e90ff;
+    height: 20px;
+    margin: 0px 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.buttons .cancel, .buttons .save {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons .cancel {
+    background-color: #ccc;
+    margin-right: 10px;
+}
+
+.buttons .cancel:hover {
+    background-color: #aaa;
+    transition: 0.3s;
+}
+
+.buttons .save {
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+.buttons .save:hover {
+    background-color: #0f78d4;
+    transition: 0.3s;
+}
+
+
+.profile-picture-upload {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.upload-info {
+    text-align: left;
+    flex: 1;
+}
+
+.upload-label {
+    cursor: pointer;
+    display: block;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.upload-box {
+    border: 1px solid #1e90ff;
+    border-radius: 5px;
+    padding: 10px;
+    flex: 1;
+    position: relative;
+}
+
+.upload-box:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #1e90ff;
+    transform: translateY(-50%);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 20px 0;
+}
