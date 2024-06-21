@@ -1,6 +1,6 @@
-## Mentorin Aja
+# Mentorin Aja
 
-# Pengertian
+## Pengertian
 
 Dalam proses belajar, seringkali siswa atau mahasiswa kesulitan menemukan
 mentor yang cocok untuk membantu mereka memahami materi dengan baik. Hal ini bisa
@@ -17,7 +17,7 @@ belajar. Website saat ini menjadi platform yang memiliki aksesbilitas tinggi, ka
 diakses di berbagai platform kapan saja. website yang menyediakan layanan mentoring
 kepada orang yang ingin belajar dari kalangan mana aja.
 
-# Tujuan
+## Tujuan
 
 Website “Mentorin Aja” memiliki beberapa tujuan, yakni :
 
@@ -33,7 +33,7 @@ Website “Mentorin Aja” memiliki beberapa tujuan, yakni :
 5. Membuat akses dan biaya untuk memiliki mentor pribadi menjadi lebih terjangkau
    dan mudah melalui platform yang tersedia
 
-# Fungsionalitas Sistem
+## Fungsionalitas Sistem
 
 1. Sistem memungkinkan untuk melakukan pendaftaran untuk menjadi
    Mentor/User dengan data diri yang jelas dan lengkap.
@@ -50,7 +50,7 @@ Website “Mentorin Aja” memiliki beberapa tujuan, yakni :
 4. Sistem memungkinkan memberikan akses pada Mentor untukmengatur
    list harga dari jasa yang diberikan.
 
-# Alur Kerja Sistem
+## Alur Kerja Sistem
 
 1. Penerimaan data diri user
    Sistem akan mencatat data diri dari setiap pengguna yang akan melakukan
