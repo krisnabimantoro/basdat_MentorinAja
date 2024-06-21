@@ -44,7 +44,7 @@ if (move_uploaded_file($image_tmp_name, $target_file)) {
     
         if ($result) {
             oci_commit($conn); // Commit the transaction
-            echo "<script>alert('Berhasil Menambahkan Mentorship'); window.location.href='../pages/success.html';</script>";
+            echo "<script>alert('Berhasil Menambahkan Mentorship'); window.location.href='../pages/searching.php';</script>";
             exit();
         } else {
             $e = oci_error($stmt); // For error handling
