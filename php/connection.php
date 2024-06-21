@@ -5,6 +5,6 @@
             echo 'Failed to connect to oracle' . "<br>";
         }
         else {
-            echo 'Connected successfully!' ."<br>";
+            // echo 'Connected successfully!' ."<br>";
         }
         ?>
