@@ -1,6 +1,13 @@
 <?php
 session_start();
 $role = isset($_SESSION['role']) ? $_SESSION['role'] : null;
+
+require '../php/connection.php';
+
+// Fetch mentorship data
+$sql = 'SELECT * FROM tb_mentorship ';
+$stid = oci_parse($conn, $sql);
+oci_execute($stid);
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +22,7 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : null;
     <link rel="stylesheet" href="../styles/searching.css" />
   </head>
   <body>
+
   <nav class="navbar">
     <div class="navbar-left">
       <img src="../icon/logo.png" alt="Logo" class="logo">
@@ -36,7 +44,10 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : null;
       </ul>
     </div>
     <div class="navbar-right">
-      <img src="../img/Profile.png" alt="Profile" class="profile-pic">
+      <a href="./profile.php">
+
+        <img src="../img/Profile.png" alt="Profile" class="profile-pic" >
+      </a>
     </div>
   </nav>
     
@@ -67,9 +78,29 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : null;
       </select>
     </div>
 
+    
     <div class="mentorship-section">
       <h2>Mentorship</h2>
       <div class="mentorship-cards">
+      <div class="cards-container">
+    <?php while ($row = oci_fetch_assoc($stid)): ?>
+      <div class="card">
+      <img class="gambar" src="../uploads/<?php echo htmlspecialchars($row['IMG']); ?>" alt="Mentorship Image" />
+        <h3><?php echo htmlspecialchars($row['SPECIALIZATION']); ?></h3>
+        <p><?php echo htmlspecialchars($row['DESCRIPTION']); ?></p>
+        <div class="details">
+          <p class="price">Rp. <?php echo number_format($row['PRICE'], 0, ',', '.'); ?></p>
+          <p class="rating"><?php echo htmlspecialchars($row['RATE']); ?></p>
+        </div>
+      </div>
+    <?php endwhile; ?>
+    <?php
+    oci_free_statement($stid);
+    oci_close($conn);
+    ?>
+  </div>
+
+
         <div class="card">
           <img src="../img/Science.png" alt="Science" />
           <h3>Muhammad Arif Irfan</h3>
