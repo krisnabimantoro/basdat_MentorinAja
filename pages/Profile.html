@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,336 +8,130 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./Profile.css">
-    <style>
-        /* CSS Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f4f4f4;
-        }
-
-        .profile-container {
-            width: 60%;
-            margin: 50px auto;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 10px;
-        }
-
-        .profile-header {
-            display: flex;
-            align-items: center;
-            padding: 20px;
-            background-color: #1e90ff;
-            border-radius: 10px 10px 0 0;
-            color: #fff;
-        }
-
-        .profile-pic-wrapper {
-            margin-right: 20px;
-        }
-
-        .profile-pic {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 5px solid #fff;
-        }
-
-        .header-info {
-            flex: 1;
-        }
-
-        .header-info h1 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .view-profile {
-            background-color: #fff;
-            color: #1e90ff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            align-self: flex-start;
-        }
-
-        .view-profile:hover {
-            background-color: #e0e0e0;
-            transition: 0.3s;
-        }
-
-        .profile-settings {
-            padding: 20px;
-        }
-
-        .settings-header {
-            text-align: left;
-            margin-bottom: 20px;
-        }
-
-        .settings-header h2 {
-            font-size: 24px;
-            margin-bottom: 5px;
-            color: #1e90ff;
-        }
-
-        .settings-header p {
-            color: #555;
-            font-size: 14px;
-        }
-
-        .settings-section {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .section-description {
-            margin-bottom: 10px;
-        }
-
-        .section-description h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 5px;
-            color: #1e90ff;
-        }
-
-        .section-description p {
-            color: #555;
-            font-size: 14px;
-        }
-
-        .form-group {
-            display: flex;
-            margin-bottom: 10px;
-        }
-
-        .form-group label {
-            width: 150px;
-            color: #555;
-            margin-right: 15px;
-            line-height: 32px;
-        }
-
-        .form-group .input-group {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            border: 1px solid #1e90ff;
-            border-radius: 5px;
-            padding: 5px;
-        }
-
-        .form-group input {
-            flex: 1;
-            border: none;
-            outline: none;
-            padding: 8px;
-        }
-
-        .separator {
-            border-left: 1px solid #1e90ff;
-            height: 20px;
-            margin: 0 10px;
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: flex-end;
-            margin-top: 20px;
-        }
-
-        .buttons .cancel, .buttons .save {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .buttons .cancel {
-            background-color: #ccc;
-            margin-right: 10px;
-        }
-
-        .buttons .cancel:hover {
-            background-color: #aaa;
-            transition: 0.3s;
-        }
-
-        .buttons .save {
-            background-color: #1e90ff;
-            color: #fff;
-        }
-
-        .buttons .save:hover {
-            background-color: #0f78d4;
-            transition: 0.3s;
-        }
-
-        .profile-picture-upload {
-            text-align: center;
-        }
-
-        .profile-picture-upload .upload-box {
-            display: inline-block;
-            position: relative;
-        }
-
-        .profile-picture-upload .upload-info {
-            border: 1px dashed #1e90ff;
-            padding: 20px;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-
-        .profile-picture-upload .upload-label {
-            display: block;
-            color: #1e90ff;
-            font-weight: 600;
-        }
-
-        .profile-picture-upload #upload-input {
-            display: none;
-        }
-
-        .public-profile-box {
-            border: 1px solid #1e90ff;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            background-color: #f9f9f9;
-        }
-
-        .social-profile-box {
-            border: 1px solid #1e90ff;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            background-color: #f9f9f9;
-        }
-
-    </style>
+    <link rel="stylesheet" href="../styles//Profile.css" />
+  </head>
 </head>
+
 <body>
     <div class="profile-container">
         <div class="profile-header">
             <div class="profile-pic-wrapper">
-                <img src="./Gambar/Profile.png" alt="Profile Picture" class="profile-pic" id="currentProfilePic">
+                <img src="../img/Profile.png" alt="Profile Picture" class="profile-pic" id="currentProfilePic">
             </div>
             <div class="header-info">
-                <h1>ROFIQ SAMANHUDI</h1>
-                <button class="view-profile">View Profile</button>
+                <h1 id="userName">ROFIQ SAMANHUDI</h1>
             </div>
+            <button class="view-profile">View Profile</button>
         </div>
         <div class="profile-settings">
             <div class="settings-header">
                 <h2>Profile Settings</h2>
-                <p>Profile settings allow you to manage your preferences and personal information.</p>
+                <p>It allows you to showcase your contact information, making it easier for students or other users to reach out to you for mentoring opportunities.</p>
             </div>
             <div class="settings-section">
                 <div class="section-description">
                     <h3>Public Profile</h3>
-                    <p>This will be displayed on your profile.</p>
+                    <p>This is will be deployed on your profile.</p>
                 </div>
-                <div class="public-profile-box">
+                <div class="profile-box">
                     <div class="form-group">
-                        <label for="public-profile">Public Profile</label>
                         <div class="input-group">
-                            <input type="text" id="public-profile" value="Rofiq Samanhudi">
+                            <span>Name:</span>
+                            <input type="text" id="public-name" placeholder="Your name">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="public-url">Public URL</label>
                         <div class="input-group">
-                            <input type="text" id="public-url" value="mentorinaja.my.id/rofiqsamanhudi">
+                            <span>mentorinaja.my.id/</span>
+                            <input type="text" id="public-url" placeholder="Your URL">
                         </div>
                     </div>
-                </div>
-            </div>
+                </div> <!-- closing profile-box -->
+            </div> <!-- closing settings-section -->
+
             <div class="settings-section">
                 <div class="section-description">
                     <h3>Social Profile</h3>
                     <p>You can link your Twitter and Instagram profiles to expand your reach and allow students or other users to interact with you on these platforms.</p>
                 </div>
-                <div class="social-profile-box">
+                <div class="profile-box">
                     <div class="form-group">
-                        <label for="twitter">Twitter</label>
                         <div class="input-group">
-                            <input type="text" id="twitter" value="twitter.com/RofiqSamanhudiii">
+                            <span>twitter.com/</span>
+                            <input type="text" id="twitter" placeholder="Twitter username">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="instagram">Instagram</label>
                         <div class="input-group">
-                            <input type="text" id="instagram" value="instagram.com/@rofiqsamanhudi_">
+                            <span>instagram.com/</span>
+                            <input type="text" id="instagram" placeholder="Instagram username">
                         </div>
                     </div>
-                </div>
-            </div>
+                </div> <!-- closing profile-box -->
+            </div> <!-- closing settings-section -->
+
             <div class="settings-section">
                 <div class="section-description">
                     <h3>Profile Picture</h3>
-                    <p>Update your profile picture</p>
+                    <p>Update your profile picture.</p>
                 </div>
-                <div class="profile-picture-upload">
-                    <div class="upload-box">
-                        <div class="upload-info">
-                            <input type="file" id="upload-input" accept="image/*" onchange="previewImage(this)">
-                            <label for="upload-input" class="upload-label">Click to upload or drag and drop SVG, PNG, JPG or GIF (800x400px)</label>
+                <div class="profile-box">
+                    <div class="form-group">
+                        <div class="upload-group">
+                            <input type="file" id="profile-upload" accept=".svg, .png, .jpg, .jpeg, .gif" onchange="previewProfilePicture(event)">
+                            <label for="profile-upload" style="cursor: pointer;">Click to upload or drag and drop SVG, PNG, JPG or GIF (800x400px)</label>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="settings-section">
                 <div class="section-description">
                     <h3>Account Profile</h3>
-                    <p>This is your personal information.</p>
+                    <p>It allows you to showcase your contact information, making it easier for students or other users to reach out to you for mentoring opportunities.</p>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <div class="input-group">
-                        <input type="email" id="email" value="rofiqsamanhudi@gmail.com">
+                <div class="profile-box">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span>Email:</span>
+                            <input type="email" id="email" placeholder="Your email">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone</label>
-                    <div class="input-group">
-                        <input type="tel" id="phone" value="+62 878 5397 4474">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="location">Location</label>
-                    <div class="input-group">
-                        <input type="text" id="location" value="Jawa Timur">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span>Phone Number:</span>
+                            <input type="tel" id="phone" placeholder="Your phone number">
+                        </div>
                     </div>
                 </div>
             </div>
+
             <div class="buttons">
                 <button class="cancel">Cancel</button>
-                <button class="save">Save</button>
+                <button class="save" onclick="saveChanges()">Save Changes</button>
             </div>
-        </div>
-    </div>
+        </div> <!-- closing profile-settings -->
+    </div> <!-- closing profile-container -->
+
     <script>
-        function previewImage(input) {
-            const file = input.files[0];
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                document.getElementById('currentProfilePic').src = e.target.result;
+        function previewProfilePicture(event) {
+            var input = event.target;
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('currentProfilePic').src = e.target.result;
+                };
+                reader.readAsDataURL(input.files[0]);
             }
-            reader.readAsDataURL(file);
+        }
+
+        function saveChanges() {
+            // Logic to save changes (placeholder)
+            var newName = document.getElementById('public-name').value;
+            document.getElementById('userName').textContent = newName;
+            alert('Changes saved successfully!');
         }
     </script>
 </body>
+
 </html>
