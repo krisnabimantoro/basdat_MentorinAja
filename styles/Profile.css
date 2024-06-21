@@ -1,286 +1,342 @@
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #000; /* Mengubah warna teks menjadi hitam di seluruh halaman */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #000; /* Mengubah warna teks menjadi hitam di seluruh halaman */
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f4f4f4;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #ffffff;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar-left .logo {
+  height: 60px;
+  margin-left: 20px;
+}
+
+.navbar-center .menu {
+  list-style: none;
+
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-center .menu li {
+  margin: 0 15px;
+}
+
+.navbar-center .menu li a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.navbar-center .menu li a:hover {
+  text-decoration: underline;
+}
+
+.navbar-right .profile-pic {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  padding: 10px 20px;
 }
 
 .profile-container {
-    width: 80%;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+  width: 80%;
+  margin: 150px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .profile-header {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff; /* Tetapkan background putih di sini */
-    border-radius: 10px 10px 0 0;
-    position: relative;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff; /* Tetapkan background putih di sini */
+  border-radius: 10px 10px 0 0;
+  position: relative;
 }
 
 .header-info {
-    flex: 1;
-    z-index: 1; /* Pastikan teks tetap di atas latar belakang */
+  flex: 1;
+  z-index: 1; /* Pastikan teks tetap di atas latar belakang */
 }
 
 .view-profile {
-    background-color: #ffffff;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border-color: #1e90ff;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
+  background-color: #ffffff;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border-color: #1e90ff;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
 }
 
 .profile-pic-wrapper {
-    margin-right: 20px;
-    position: relative; /* Tambahkan position: relative untuk overlay */
-    z-index: 0; /* Berikan z-index lebih rendah agar tetap terpengaruh oleh latar belakang */
+  margin-right: 20px;
+  position: relative; /* Tambahkan position: relative untuk overlay */
+  z-index: 0; /* Berikan z-index lebih rendah agar tetap terpengaruh oleh latar belakang */
 }
 
 .profile-pic {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 5px solid #1e90ff; /* Sesuaikan border sesuai kebutuhan */
-    position: relative; /* Tambahkan position: relative untuk overlay */
-    z-index: 0; /* Berikan z-index lebih rendah agar tetap terpengaruh oleh latar belakang */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid #1e90ff; /* Sesuaikan border sesuai kebutuhan */
+  position: relative; /* Tambahkan position: relative untuk overlay */
+  z-index: 0; /* Berikan z-index lebih rendah agar tetap terpengaruh oleh latar belakang */
 }
 
-
 .header-info {
-    flex: 1;
+  flex: 1;
 }
 
 .header-info h1 {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 5px;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
 .header-info p {
-    font-size: 14px;
-    margin-bottom: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 .view-profile:hover {
-    background-color: #0f78d4; /* Ubah warna hover untuk efek visual */
-    transition: 0.3s;
+  background-color: #0f78d4; /* Ubah warna hover untuk efek visual */
+  transition: 0.3s;
 }
 
 .profile-settings {
-    padding: 20px;
-    border-bottom: 2px solid #1e90ff;
-    margin-bottom: 20px;
+  padding: 20px;
+  border-bottom: 2px solid #1e90ff;
+  margin-bottom: 20px;
 }
 
 .settings-header {
-    text-align: left;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
+  text-align: left;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
 }
 
 .settings-header h2 {
-    font-size: 24px;
-    margin-bottom: 5px;
-    color: #394559;
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: #394559;
 }
 
 .settings-header p {
-    color: #555;
-    font-size: 14px;
-    max-width: 80%; /* Menyesuaikan agar tidak terlalu menjalar ke kanan */
+  color: #555;
+  font-size: 14px;
+  max-width: 80%; /* Menyesuaikan agar tidak terlalu menjalar ke kanan */
 }
 
 .settings-section {
-    display: flex;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #ccc;
+  display: flex;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
 }
 
 .section-description {
-    flex: 40%;
-    padding-right: 20px;
-    border-right: 1px solid #ccc;
-    text-align: left; /* Menyesuaikan agar tidak terlalu menjalar ke kanan */
+  flex: 40%;
+  padding-right: 20px;
+  border-right: 1px solid #ccc;
+  text-align: left; /* Menyesuaikan agar tidak terlalu menjalar ke kanan */
 }
 
 .section-description h3 {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #394559;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #394559;
 }
 
 .section-description p {
-    color: #394559;
-    font-size: 14px;
-    margin-bottom: 10px;
-    max-width: 80%; /* Menyesuaikan agar tidak terlalu menjalar ke kanan */
+  color: #394559;
+  font-size: 14px;
+  margin-bottom: 10px;
+  max-width: 80%; /* Menyesuaikan agar tidak terlalu menjalar ke kanan */
 }
 
 .profile-box {
-    flex: 60%;
-    padding-left: 20px;
+  flex: 60%;
+  padding-left: 20px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
 }
 
 .form-group .input-group {
-    display: flex;
-    align-items: center;
-    border: 1px solid #1e90ff;
-    border-radius: 5px;
-    padding: 5px;
-    background-color: #fff;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #1e90ff;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #fff;
+  margin-bottom: 10px;
 }
 
 .form-group .input-group span {
-    color: #555;
-    padding: 0 10px;
-    border-right: 1px solid #ccc;
-    min-width: 180px;
-    text-align: left;
+  color: #555;
+  padding: 0 10px;
+  border-right: 1px solid #ccc;
+  min-width: 180px;
+  text-align: left;
 }
 
 .form-group .input-group input[type="text"],
 .form-group .input-group input[type="email"],
 .form-group .input-group input[type="tel"] {
-    flex: 1;
-    border: none;
-    outline: none;
-    padding: 8px;
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 8px;
 }
 
 .form-group .upload-group {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Menengahkan teks dan memperbesar kotak upload */
-    margin-top: 10px;
-    border: 1px dashed #1e90ff;
-    padding: 30px; /* Memperbesar kotak upload */
-    cursor: pointer;
-    border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Menengahkan teks dan memperbesar kotak upload */
+  margin-top: 10px;
+  border: 1px dashed #1e90ff;
+  padding: 30px; /* Memperbesar kotak upload */
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .form-group .upload-group input[type="file"] {
-    display: none;
+  display: none;
 }
 
 .form-group .upload-group label {
-    color: #1e90ff;
-    cursor: pointer;
-    text-align: center; /* Menengahkan teks pada kotak upload */
+  color: #1e90ff;
+  cursor: pointer;
+  text-align: center; /* Menengahkan teks pada kotak upload */
 }
 
 .buttons {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
 }
 
-.buttons .cancel, .buttons .save {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.buttons .cancel,
+.buttons .save {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .buttons .cancel {
-    background-color: #ccc;
-    margin-right: 10px;
+  background-color: #ccc;
+  margin-right: 10px;
 }
 
 .buttons .cancel:hover {
-    background-color: #aaa;
-    transition: 0.3s;
+  background-color: #aaa;
+  transition: 0.3s;
 }
 
 .buttons .save {
-    background-color: #1e90ff;
-    color: #fff;
+  background-color: #1e90ff;
+  color: #fff;
 }
 
 .buttons .save:hover {
-    background-color: #0f78d4;
-    transition: 0.3s;
+  background-color: #0f78d4;
+  transition: 0.3s;
 }
 
 @media (max-width: 768px) {
-    .profile-container {
-        width: 90%;
-    }
+  .profile-container {
+    width: 90%;
+  }
 
-    .profile-header {
-        flex-direction: column;
-        text-align: center;
-    }
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .profile-pic-wrapper {
-        margin: 0 0 20px 0;
-    }
+  .profile-pic-wrapper {
+    margin: 0 0 20px 0;
+  }
 
-    .view-profile {
-        position: static;
-        margin-top: 10px;
-    }
+  .view-profile {
+    position: static;
+    margin-top: 10px;
+  }
 
-    .settings-section {
-        flex-direction: column;
-        align-items: stretch;
-    }
+  .settings-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
-    .section-description,
-    .profile-box {
-        padding: 0;
-        border: none;
-    }
+  .section-description,
+  .profile-box {
+    padding: 0;
+    border: none;
+  }
 
-    .section-description {
-        border-bottom: 1px solid #ccc;
-        margin-bottom: 20px;
-        padding-bottom: 20px;
-    }
+  .section-description {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
 
-    .form-group .input-group span {
-        border-right: none;
-        padding-right: 0;
-        min-width: auto;
-        text-align: left;
-    }
+  .form-group .input-group span {
+    border-right: none;
+    padding-right: 0;
+    min-width: auto;
+    text-align: left;
+  }
 
-    .buttons {
-        flex-direction: column;
-        align-items: stretch;
-    }
+  .buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
-    .buttons .cancel {
-        margin-bottom: 10px;
-    }
+  .buttons .cancel {
+    margin-bottom: 10px;
+  }
 }
