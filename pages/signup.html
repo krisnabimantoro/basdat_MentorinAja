@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MentorinAja/Sign Up Form</title>
-    <link rel="stylesheet" href="./signup.css" />
+    <title>MentorinAja</title>
+    <link rel="stylesheet" href="../styles/signup.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700&display=swap" rel="stylesheet" />
@@ -26,7 +26,7 @@
       </div>
       <div class="right-side montserrat-signup">
         <h2>Sign up</h2>
-        <form action="./php/signup.php" method="post">
+        <form action="../php/signup.php" method="post">
           <select id="role" class="input-field" name="role">
             <option value="2">Student</option>
             <option value="1">Mentor</option>
@@ -52,10 +52,11 @@
             <input type="password" class="input-field" placeholder="Confirm Password" id="confirm-password" name="confirm-password" />
             <span class="show-password">&#128065;</span>
           </div>
+          <!-- <button class="button">Cek pop up</button> -->
           <button class="button" type="submit">Sign Up</button>
         </form>
         <div class="sign-in-container">
-          <p>Sudah Mempunyai Akun? <a href="../login.html" class="sign-in">Sign in</a></p>
+          <p>Sudah Mempunyai Akun? <a href="./login.html" class="sign-in">Sign in</a></p>
         </div>
       </div>
     </div>

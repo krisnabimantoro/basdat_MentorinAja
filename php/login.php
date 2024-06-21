@@ -25,13 +25,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 // Start the session and redirect to the searching page
                 $_SESSION['user_id'] = $user['ID_USER'];
                 $_SESSION['email'] = $user['EMAIL'];
-                header("Location: ../searching.html");
+                $_SESSION['role'] = $user['TB_ROLE_ID_ROLE'];
+                header("Location: ../pages/searching.php");
                 exit();
             } else {
-                echo "<script>alert('Password salah'); window.location.href='../login.html';</script>";
+                echo "<script>alert('Password salah'); window.location.href='../pages/login.html';</script>";
             }
         } else {
-            echo "<script>alert('Email tidak ditemukan'); window.location.href='../login.html';</script>";
+            echo "<script>alert('Email tidak ditemukan'); window.location.href='../pages/login.html';</script>";
         }
 
         oci_free_statement($stid);

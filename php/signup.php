@@ -20,7 +20,7 @@ try {
     
     $stmt = oci_parse($conn, $sql);
     
-    // Bind parameters
+    // Bind parameters120120
     oci_bind_by_name($stmt, ':name', $name);
     oci_bind_by_name($stmt, ':dob', $dob);
     oci_bind_by_name($stmt, ':email', $email);
@@ -34,7 +34,7 @@ try {
 
     if ($result) {
         oci_commit($conn); // Commit the transaction
-        echo "<script>alert('Berhasil Membuat Akun'); window.location.href='../login.html';</script>";
+        echo "<script>alert('Berhasil Membuat Akun'); window.location.href='../pages/login.html';</script>";
         exit();
     } else {
         $e = oci_error($stmt); // For error handling
