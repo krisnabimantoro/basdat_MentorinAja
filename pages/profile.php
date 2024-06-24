@@ -81,7 +81,7 @@ $user = oci_fetch_assoc($stid);
                     <div class="form-group">
                         <div class="input-group">
                             <span>Name:</span>
-                            <input type="text" id="public-name" placeholder="Your name">
+                            <input type="text" id="public-name" placeholder="<?php echo htmlspecialchars($user['NAME']); ?>">
                         </div>
                     </div>
                     <div class="form-group">
