@@ -29,15 +29,17 @@ oci_execute($stid);
     </div>
     <div class="navbar-center">
       <ul class="menu">
-        <?php if ($role == '1'): ?>
+        <?php if ($role == '2'): ?>
           <li><a href="#">Akun Mentor</a></li>
           <li><a href="./tambahmentor.html">Tambah Mentor</a></li>
           <li><a href="#">Pesanan</a></li>
-        <?php elseif ($role == '2'): ?>
-          <li><a href="#">Pemesanan</a></li>
-        <?php else: ?>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="./report.html">Report</a></li>
+          <?php elseif ($role == '1'): ?>
+            <li><a href="#">Pemesanan</a></li>
+            <li><a href="./report.html">Report</a></li>
+            <?php else: ?>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="#">Contact</a></li>
         <?php endif; ?>
