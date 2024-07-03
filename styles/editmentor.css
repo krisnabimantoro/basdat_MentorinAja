@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    position: relative;
+}
+
+.profile-pic img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.profile-pic .edit-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.profile-info {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+}
+
+.info-item h2, .info-item p, .info-item .tag {
+    margin: 0;
+}
+
+.info-item .edit-icon {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.tag-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.tag {
+    background-color: #FDB500;
+    width: 325px;
+    height: 65px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.tag-container .edit-icon {
+    position: absolute;
+    right: -30px;
+    cursor: pointer;
+}
+
+.mentorship-bar {
+    background-color: #FDB500;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin: 20px 0;
+}
+
+.mentorship-bar p {
+    color: #394559;
+    font-size: 24px;
+}
+
+.mentorship-bar .arrows {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.arrow-left {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #3369EA;
+    border-radius: 50%;
+    background: transparent url('icon/arrow-left.png') center/contain no-repeat;
+    cursor: pointer;
+}
+
+.arrow-right {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #3369EA;
+    border-radius: 50%;
+    background: #3369EA url('icon/arrow-right.png') center/contain no-repeat;
+    cursor: pointer;
+}
+
+.boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.box {
+    background-color: #3369EA;
+    border-radius: 20px;
+    width: 375px;
+    height: 328px;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.box img {
+    width: 342px;
+    height: 178px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.box-content {
+    width: 100%;
+}
+
+.box-content h3, .box-content p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-icons {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.box-icons .edit-icon, .box-icons .trash-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.add-course {
+    background-color: #3369EA;
+    width: 174px;
+    height: 49px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 27.2cm;
+    bottom: 10px; 
+    right: 5%; 
+}
+

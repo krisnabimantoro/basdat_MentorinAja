@@ -1,0 +1,105 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1em;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.payment-info {
+    border-top: 1px solid #eaeaea;
+    padding-top: 20px;
+}
+
+.package-info, .promo-code, .total-amount {
+    margin-bottom: 20px;
+}
+
+.package-info h2, .promo-code h2, .total-amount h2 {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.price, .total {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.promo-code p {
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #777;
+}
+
+select {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.promo-button, .apply-button, .pay-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.promo-button {
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.apply-button {
+    background-color: #28a745;
+}
+
+.pay-button {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 15px;
+}

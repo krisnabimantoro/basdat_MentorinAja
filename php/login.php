@@ -9,20 +9,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty($email) || empty($password)) {
         echo "Email and Password are required!";
     } else {
-        // Prepare the SQL statement to fetch the user data by email
         $sql = 'SELECT * FROM tb_user WHERE email = :email';
         $stid = oci_parse($conn, $sql);
         oci_bind_by_name($stid, ':email', $email);
 
         oci_execute($stid);
 
-        // Fetch the user data
         $user = oci_fetch_assoc($stid);
 
         if ($user) {
-            // Verify the password
             if (password_verify($password, $user['PASSWORD'])) {
-                // Start the session and redirect to the searching page
                 $_SESSION['user_id'] = $user['ID_USER'];
                 $_SESSION['email'] = $user['EMAIL'];
                 $_SESSION['role'] = $user['TB_ROLE_ID_ROLE'];

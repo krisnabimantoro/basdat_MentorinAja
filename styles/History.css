@@ -1,0 +1,98 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e0f7fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: #336AE9;
+    font-size: 1em;
+    margin-bottom: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.back-button i {
+    margin-right: 5px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #336AE9;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f0f4f7;
+}
+
+th, td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #336AE9;
+    color: white;
+    text-transform: uppercase;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e3f2fd;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tbody tr:hover {
+    background-color: #bbdefb;
+    cursor: pointer;
+}
+
+.promo-code {
+    margin-bottom: 20px;
+}
+
+.promo-code h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.promo-code p {
+    margin-bottom: 10px;
+}
+
+.promo-select {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #336AE9;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -35,19 +35,16 @@ $user = oci_fetch_assoc($stid);
     </div>
     <div class="navbar-center">
       <ul class="menu">
-        <?php if ($role == '2'): ?>
+      <?php if ($role == '2'): ?>
           <li><a href="#">Akun Mentor</a></li>
           <li><a href="./tambahmentor.html">Tambah Mentor</a></li>
           <li><a href="#">Pesanan</a></li>
-        <?php elseif ($role == '1'): ?>
-          <li><a href="#">Pemesanan</a></li>
-        <?php else: ?>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="./history.php">History</a></li>
+          <?php elseif ($role == '1'): ?>
+            <li><a href="#">Pemesanan</a></li>
+            <li><a href="./history.php">History</a></li>
+        
         <?php endif; ?>
-      </ul>
     </div>
     <div class="navbar-right">
       <a href="./profile.php">
@@ -65,13 +62,18 @@ $user = oci_fetch_assoc($stid);
             <div class="header-info">
                 <h1 id="userName"><?php echo htmlspecialchars($user['NAME']); ?></h1>
             </div>
-            <button class="view-profile">View Profile</button>
+            <a href="../index.html">
+
+                <button class="view-profile">Log Out</button>
+            </a>
         </div>
         <div class="profile-settings">
             <div class="settings-header">
                 <h2>Profile Settings</h2>
                 <p>It allows you to showcase your contact information, making it easier for students or other users to reach out to you for mentoring opportunities.</p>
             </div>
+
+            <form action="../php/profile.php" method="post">
             <div class="settings-section">
                 <div class="section-description">
                     <h3>Public Profile</h3>
@@ -81,13 +83,13 @@ $user = oci_fetch_assoc($stid);
                     <div class="form-group">
                         <div class="input-group">
                             <span>Name:</span>
-                            <input type="text" id="public-name" placeholder="<?php echo htmlspecialchars($user['NAME']); ?>">
+                            <input type="text" id="public-name" name="name" placeholder="<?php echo htmlspecialchars($user['NAME']); ?>" >
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-group">
-                            <span>mentorinaja.my.id/</span>
-                            <input type="text" id="public-url" placeholder="Your URL">
+                            <span>Address</span>
+                            <input type="text" name="address"  id="public-url" placeholder="<?php echo htmlspecialchars($user['ADDRESS']); ?>">
                         </div>
                     </div>
                 </div> <!-- closing profile-box -->
@@ -122,7 +124,7 @@ $user = oci_fetch_assoc($stid);
                 <div class="profile-box">
                     <div class="form-group">
                         <div class="upload-group">
-                            <input type="file" id="profile-upload" accept=".svg, .png, .jpg, .jpeg, .gif" onchange="previewProfilePicture(event)">
+                            <input type="file" id="profile-upload" name="img" accept=".svg, .png, .jpg, .jpeg, .gif" onchange="previewProfilePicture(event)">
                             <label for="profile-upload" style="cursor: pointer;">Click to upload or drag and drop SVG, PNG, JPG or GIF (800x400px)</label>
                         </div>
                     </div>
@@ -138,13 +140,13 @@ $user = oci_fetch_assoc($stid);
                     <div class="form-group">
                         <div class="input-group">
                             <span>Email:</span>
-                            <input type="email" id="email" placeholder="Your email">
+                            <input type="email" name="email" id="email" placeholder="<?php echo htmlspecialchars($user['EMAIL']); ?>">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-group">
                             <span>Phone Number:</span>
-                            <input type="tel" id="phone" placeholder="Your phone number">
+                            <input type="tel" name="phone" id="phone" placeholder="<?php echo htmlspecialchars($user['NO_HANDPHONE']); ?>">
                         </div>
                     </div>
                 </div>
@@ -152,8 +154,12 @@ $user = oci_fetch_assoc($stid);
 
             <div class="buttons">
                 <button class="cancel">Cancel</button>
-                <button class="save" onclick="saveChanges()">Save Changes</button>
+                <button class="save">Save Changes</button>
             </div>
+
+
+            </form>
+          
         </div> <!-- closing profile-settings -->
     </div> <!-- closing profile-container -->
 
@@ -169,12 +175,7 @@ $user = oci_fetch_assoc($stid);
             }
         }
 
-        function saveChanges() {
-            // Logic to save changes (placeholder)
-            var newName = document.getElementById('public-name').value;
-            document.getElementById('userName').textContent = newName;
-            alert('Changes saved successfully!');
-        }
+       
     </script>
 </body>
 
